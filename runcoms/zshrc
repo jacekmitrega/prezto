@@ -21,3 +21,5 @@ if [[ -x "${ZDOTDIR:-$HOME}/.zshrc.local" ]]; then
 fi
 
 # ===== SPECIFIC CUSTOMIZATIONS ===== #
+
+alias emacs="$EDITOR"
