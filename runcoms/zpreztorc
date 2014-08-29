@@ -89,7 +89,11 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'sorinj'
+
+# Override just the hostname or the whole hostname prompt.
+# export ZSH_CUSTOM_HOSTNAME="$(hostname -s)"
+# export ZSH_CUSTOM_HOSTNAME_PROMPT="%F{blue}[@${ZSH_CUSTOM_HOSTNAME}]%f "
 
 #
 # Ruby
