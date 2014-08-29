@@ -95,6 +95,7 @@ zstyle ':prezto:module:prompt' theme 'sorinj2'
 # Override just the hostname or the whole hostname prompt.
 # export ZSH_CUSTOM_HOSTNAME="$(hostname -s)"
 # export ZSH_CUSTOM_HOSTNAME_PROMPT="%F{blue}[@${ZSH_CUSTOM_HOSTNAME}]%f "
+export ZSH_CUSTOM_HOSTNAME_PROMPT="%F{white} "
 
 #
 # Ruby
