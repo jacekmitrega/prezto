@@ -11,3 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Treat these characters as part of a word (excluded dot '.'):
+export WORDCHARS='*?_-[]~&;!#$%^(){}<>'
