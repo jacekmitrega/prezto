@@ -10,7 +10,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+# ===== COMMON CUSTOMIZATIONS ===== #
 
 # Treat these characters as part of a word (excluded dot '.'):
 export WORDCHARS='*?_-[]~&;!#$%^(){}<>'
@@ -19,3 +19,5 @@ export WORDCHARS='*?_-[]~&;!#$%^(){}<>'
 if [[ -x "${ZDOTDIR:-$HOME}/.zshrc.local" ]]; then
     source "${ZDOTDIR:-$HOME}/.zshrc.local"
 fi
+
+# ===== SPECIFIC CUSTOMIZATIONS ===== #
