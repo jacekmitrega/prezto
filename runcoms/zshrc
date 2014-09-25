@@ -14,3 +14,8 @@ fi
 
 # Treat these characters as part of a word (excluded dot '.'):
 export WORDCHARS='*?_-[]~&;!#$%^(){}<>'
+
+# Source local zshrc customization file.
+if [[ -x "${ZDOTDIR:-$HOME}/.zshrc.local" ]]; then
+    source "${ZDOTDIR:-$HOME}/.zshrc.local"
+fi
