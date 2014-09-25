@@ -24,7 +24,11 @@ function prompt_sorin_pwd {
 
 function prompt_sorinj_hostname {
   local hostname=${ZSH_CUSTOM_HOSTNAME:-"$(hostname -s)"}
-  _prompt_sorinj_hostname=${ZSH_CUSTOM_HOSTNAME_PROMPT:-"%F{blue}[@${hostname}]%f "}
+  if [ -z ${ZSH_CUSTOM_HOSTNAME_PROMPT+x} ]; then
+    _prompt_sorinj_hostname="%F{blue}[@${hostname}]%f "
+  else
+    _prompt_sorinj_hostname=$ZSH_CUSTOM_HOSTNAME_PROMPT
+  fi
 }
 
 function prompt_sorin_precmd {
