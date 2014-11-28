@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+# This script installs zprezto.
+# It requires zsh to be preinstalled.
+
+set -e
+
+cd "${ZDOTDIR:-$HOME}"/.zprezto
+git submodule update --init --recursive
+
+unamestr="$(uname)"
+if [[ "$unamestr" == 'Linux' ]]; then
+    git checkout --quiet gnulinux
+elif [[ "$unamestr" == 'Darwin' ]]; then
+    git checkout --quiet mac
+else
+    git checkout --quiet common
+fi
+
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
