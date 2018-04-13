@@ -17,9 +17,15 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='emacs -nw'
+export VISUAL="$EDITOR"
 export PAGER='less'
+
+if [[ "$OSTYPE" == darwin* ]]; then
+  export EDITOR='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+  export VISUAL="$EDITOR"
+  alias emacs="$EDITOR"
+fi
 
 #
 # Language
